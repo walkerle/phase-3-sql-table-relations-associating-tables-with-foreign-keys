@@ -16,7 +16,7 @@ It's hard to imagine an application that saves data but doesn't relate it. For e
 
 ## Relating Tables with Foreign Keys
 
-SQLite makes relating tables easy with the use of foreign keys. To associate one table to another, give one table an column called "foreign key" with a type of `INTEGER` and insert the primary key of another table row into that column. In other words, if we have a blogging app, we might have a users table and a posts table. Posts belong to the user that wrote that post. So, the posts table would have a foreign key column. An individual post's foreign key value would be the primary key ID of the user who authored that post. 
+SQLite makes relating tables easy with the use of foreign keys. To associate one table to another, give one table a column called "foreign key" with a type of `INTEGER` and insert the primary key of another table row into that column. In other words, if we have a blogging app, we might have a users table and a posts table. Posts belong to the user that wrote that post. So, the posts table would have a foreign key column. An individual post's foreign key value would be the primary key ID of the user who authored that post. 
 
 This is a little confusing, so let's build out our own example together. 
 
