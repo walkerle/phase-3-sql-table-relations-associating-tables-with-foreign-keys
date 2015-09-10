@@ -93,8 +93,8 @@ SELECT * FROM cats WHERE owner_id = 1;
 This should return:
 
 ```sql
-1 |Maru  | 3 |Scottish Fold| 1
-2 | Hana | 1 | Tabby       | 1
+1 | Maru | 3 | Scottish Fold | 1
+2 | Hana | 1 | Tabby         | 1
 ```
 
 ### Establishing Foreign Key: Determining Which Table Gets a "foreign key" Column
