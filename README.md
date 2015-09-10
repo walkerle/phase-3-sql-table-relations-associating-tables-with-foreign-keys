@@ -101,6 +101,22 @@ This should return:
 
 Why did we decide to give our `pets` table the foreign key column and not the `owners` table? Similarly, in the example from the beginning of this exercise, why would we give a `posts` table a foreign key of `user_id` and not the other way around? 
 
-The answer lies in our understanding of relationships. In these instances, we have what is called a "has many" and "belongs to" relationship. An owner can have many cats, but (for the purposes of this example), a cat can only belong to one owner. Similarly, an user can have many posts that they've written but each post was written by and therefore belongs to only one user. 
+Let's look at what would happen if we tried to add cats directly to the `owners` table.
+
+Adding the first cat, "Maru", to the owner "mugumogu" would look something like this: 
+
+| id | name | cat_id|
+|----|------|-------|
+| 1  | mugumogu | 1 |
+
+So far so good. But what happens when we need to add a second cat, "Hana", to the same owner?
+
+| id | name | cat_id1| cat_id2 |
+|----|------|-------|----------|
+| 1  | mugumogu | 1 | 2        |
+
+What if this owner get *yet another cat?* We'd have to keep growing our table orizontally, potentially forever. That is not efficient, or organized. 
+
+We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but (for the purposes of this example), a cat can only belong to one owner. Similarly, an user can have many posts that they've written but each post was written by and therefore belongs to only one user. 
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
