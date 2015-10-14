@@ -2,8 +2,7 @@
 
 ## Objectives
 
-1. Understand why we need to relate tables to one another. 
-2. Learn how to relate table data to data from another table using foreign keys. 
+1. Relate table data to data from another table using foreign keys. 
 
 ## Why Relate Tables?
 
