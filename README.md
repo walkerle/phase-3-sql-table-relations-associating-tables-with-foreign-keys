@@ -18,8 +18,9 @@ This is a little confusing, so let's build out our own example together.
 
 ### Code Along I: Relating Cats to Owners
 
+Let's say we are creating an app that helps a veterinary office manage the pets it sees as patients and the owners of those pets. Let's say this vet is very particular and specializes in cats. Our app will have a database that has a `cats` table and an `owners` table. We will need a way to relate, or connect, these two tables such that a given cat is associated to its owner and a given owner is associated to the cat (or cats) it owns.
 
-Let's revisit our `pets_database.db` and our `cats` table. Cd into the directory that contains your pet's database and type: `sqlite3 pets_database.db` to connect to our database. 
+Let's revisit our `pets_database.db` and our `cats` table. `cd` into the directory that contains your pet's database and type: `sqlite3 pets_database.db` to connect to our database. 
 
 #### Step 1: Creating the Owners Table
 
