@@ -20,9 +20,33 @@ This is a little confusing, so let's build out our own example together.
 
 Let's say we are creating an app that helps a veterinary office manage the pets it sees as patients and the owners of those pets. Let's say this vet is very particular and specializes in cats. Our app will have a database that has a `cats` table and an `owners` table. We will need a way to relate, or connect, these two tables such that a given cat is associated to its owner and a given owner is associated to the cat (or cats) it owns.
 
-Let's revisit our `pets_database.db` and our `cats` table. `cd` into the directory that contains your pet's database and type: `sqlite3 pets_database.db` to connect to our database. 
+For this exercise, we'll be working with a `pets_database`. In your terminal, create the database with the `sqlite3 pets_database.db` command. Let's set up our two tables now. 
 
-#### Step 1: Creating the Owners Table
+#### Step 1: Creating the Cats Table
+
+In the `sqlite3>` prompt in your terminal, create the table with the following statement:
+
+```sql
+CREATE TABLE cats (
+id INTEGER PRIMARY KEY,
+name TEXT,
+age INTEGER,
+breed TEXT,
+owner_id INTEGER);
+```
+
+Now, go ahead and insert the following cats into the table:
+
+```sql
+INSERT INTO cats (name, age, breed)
+VALUES ("Maru", 3, "Scottish Fold");
+
+INSERT INTO cats (name, age, breed)
+VALUES ("Hana", 1, "Tabby");
+```
+
+
+#### Step 2: Creating the Owners Table
 
 First, we need to create our owners table. An owner should have an ID that is a primary key integer and a name that is text: 
 
@@ -32,7 +56,7 @@ sqlite> CREATE TABLE owners (id INTEGER PRIMARY KEY, name TEXT);
 
 Now that we have our owners table, we can add a foreign key column to the pets table. 
 
-#### Step 2: Add Foreign Key to Pets Table
+#### Step 3: Add Foreign Key to Pets Table
 
 Use the following statement to add this column: 
 
