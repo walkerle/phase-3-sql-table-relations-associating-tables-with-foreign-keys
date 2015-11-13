@@ -1,8 +1,13 @@
 # Table Relations
 
+## Overview
+
+In this lesson, we'll relate data from one table to data from another table using foreign keys. 
+
 ## Objectives
 
-1. Relate table data to data from another table using foreign keys. 
+1. Associate two data tables using a foreign key column
+2. Determine which of the two tables you're associating together will take in a foreign key column
 
 ## Why Relate Tables?
 
@@ -31,8 +36,7 @@ CREATE TABLE cats (
 id INTEGER PRIMARY KEY,
 name TEXT,
 age INTEGER,
-breed TEXT,
-owner_id INTEGER);
+breed TEXT);
 ```
 
 Now, go ahead and insert the following cats into the table:
@@ -56,7 +60,7 @@ sqlite> CREATE TABLE owners (id INTEGER PRIMARY KEY, name TEXT);
 
 Now that we have our owners table, we can add a foreign key column to the pets table. 
 
-#### Step 3: Add Foreign Key to Pets Table
+#### Step 3: Add Foreign Key to Cats Table
 
 Use the following statement to add this column: 
 
@@ -105,7 +109,7 @@ UPDATE cats SET owner_id = 1 WHERE name = "Maru";
 UPDATE cats SET owner_id = 1 WHERE name = "Hana";
 ```
 
-Let's check out our updated `pets` table: 
+Let's check out our updated `cats` table: 
 
 ```sql
 SELECT * FROM cats WHERE owner_id = 1;
@@ -120,7 +124,7 @@ This should return:
 
 ### Establishing Foreign Key: Determining Which Table Gets a "foreign key" Column
 
-Why did we decide to give our `pets` table the foreign key column and not the `owners` table? Similarly, in the example from the beginning of this exercise, why would we give a `posts` table a foreign key of `user_id` and not the other way around? 
+Why did we decide to give our `cats` table the foreign key column and not the `owners` table? Similarly, in the example from the beginning of this exercise, why would we give a `posts` table a foreign key of `user_id` and not the other way around? 
 
 Let's look at what would happen if we tried to add cats directly to the `owners` table.
 
@@ -138,6 +142,6 @@ So far so good. But what happens when we need to add a second cat, "Hana", to th
 
 What if this owner gets *yet another cat?* We'd have to keep growing our table horizontally, potentially forever. That is not efficient, or organized. 
 
-We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but (for the purposes of this example), a cat can only belong to one owner. Similarly, a user can have many posts that they've written but each post was written by and therefore belongs to only one user. 
+We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but (for the purposes of this example), a cat can only belong to one owner. Similarly, a user can have many posts that they've written but each post was written by, and therefore belongs to, only one user. 
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
