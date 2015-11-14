@@ -15,7 +15,11 @@ It's hard to imagine an application that saves data but doesn't relate it. For e
 
 ## Relating Tables with Foreign Keys
 
-SQLite makes relating tables easy with the use of foreign keys. A foreign key is a column in a database table that provides a link or a connection between data in two different tables. It acts as a cross-reference between tables because it references the primary key of another table. 
+Continuing the posts and authors examples, you could say that an author *has many* posts. The reciprocal of this would be that a post *belongs to* an author. No we need to figure out how we can represent that relationship within the constraints of SQLite. If you were writing just plain ruby, how would you represent this relationship? In our `Author` class we would have an array of `Post` objects. Our `Post` object would have a single attribute that holds it's `Author`. This is great in Ruby, but there is no data type for arrays in SQL. You can only have `INTEGER`, `FLOAT`, and `TEXT`. So developers had to figure out how to relate two rows (a `Post` and an `Author`) using only those data types. Is there any way we can convert an `INTEGER` into a specific row in a table? OH YEAH. The `id` column or `PRIMARY KEY` for each row is a unique `INTEGER` identifier for that row. So! If the Post "10 ways to pet your cat" is written by "Joe Burgess" and Joe's `id` is 5. We just need to add a new column to our Posts table with the `id` of the Author that is related to. Let's call this column `author_id`. 
+
+Why didn't we do the reverse? Why didn't we add a list of Post ids to a single Author row? The answer is pretty straight forward. Is there an array data type? Is there really any way to store multiple items in a single column? Nope! so we just set up the relation in one direction.
+
+This `author_id` column is called a "foreign key".
 
 To associate one table to another, give one table a column called "foreign key" with a type of `INTEGER` and insert the primary key of another table row into that column. In other words, if we have a blogging app, we might have a users table and a posts table. Posts belong to the user that wrote that post. So, the posts table would have a foreign key column. An individual post's foreign key value would be the primary key ID of the user who authored that post. 
 
