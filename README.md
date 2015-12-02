@@ -149,3 +149,5 @@ What if this owner gets *yet another cat?* We'd have to keep growing our table h
 We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but (for the purposes of this example), a cat can only belong to one owner. Similarly, a user can have many posts that they've written but each post was written by, and therefore belongs to, only one user. 
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
+
+<a href='https://learn.co/lessons/sql-table-relations-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
