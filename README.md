@@ -59,7 +59,7 @@ VALUES ("Hana", 1, "Tabby");
 First, we need to create our owners table. An owner should have an ID that is a primary key integer and a name that is text: 
 
 ```sql
-sqlite> CREATE TABLE owners (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE owners (id INTEGER PRIMARY KEY, name TEXT);
 ```
 
 Now that we have our owners table, we can add a foreign key column to the pets table. 
