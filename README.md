@@ -150,4 +150,4 @@ We can also think about the relationship between our owners and our cats in the 
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
 
-<a href='https://learn.co/lessons/sql-table-relations-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-table-relations-readme' title='Table Relations'>Table Relations</a> on Learn.co and start learning to code for free.</p>
