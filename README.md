@@ -15,9 +15,9 @@ It's hard to imagine an application that saves data but doesn't relate it. For e
 
 ## Relating Tables with Foreign Keys
 
-Continuing the posts and authors examples, you could say that an author *has many* posts. The reciprocal of this would be that a post *belongs to* an author. Now we need to figure out how we can represent that relationship within the constraints of SQLite. If you were writing just plain ruby, how would you represent this relationship? In our `Author` class we would have an array of `Post` objects. Our `Post` object would have a single attribute that holds it's `Author`. This is great in Ruby, but there is no data type for arrays in SQL. You can only have `INTEGER`, `FLOAT`, and `TEXT`. So developers had to figure out how to relate two rows (a `Post` and an `Author`) using only those data types. Is there any way we can convert an `INTEGER` into a specific row in a table? OH YEAH. The `id` column or `PRIMARY KEY` for each row is a unique `INTEGER` identifier for that row. So! If the Post "10 ways to pet your cat" is written by "Joe Burgess" and Joe's `id` is 5. We just need to add a new column to our Posts table with the `id` of the Author that is related to. Let's call this column `author_id`. 
+Continuing the posts and authors examples, you could say that an author *has many* posts. The reciprocal of this would be that a post *belongs to* an author. Now we need to figure out how we can represent that relationship within the constraints of SQLite. If you were writing just plain ruby, how would you represent this relationship? In our `Author` class we would have an array of `Post` objects. Our `Post` object would have a single attribute that holds its `Author`. This is great in Ruby, but there is no data type for arrays in SQL. You can only have `INTEGER`, `FLOAT`, and `TEXT`. So developers had to figure out how to relate two rows (a `Post` and an `Author`) using only those data types. Is there any way we can convert an `INTEGER` into a specific row in a table? OH YEAH. The `id` column or `PRIMARY KEY` for each row is a unique `INTEGER` identifier for that row. So! If the Post "10 ways to pet your cat" is written by "Joe Burgess" and Joe's `id` is 5. We just need to add a new column to our Posts table with the `id` of the Author that is related to. Let's call this column `author_id`. 
 
-Why didn't we do the reverse? Why didn't we add a list of Post ids to a single Author row? The answer is pretty straight forward. Is there an array data type? Is there really any way to store multiple items in a single column? Nope! so we just set up the relation in one direction.
+Why didn't we do the reverse? Why didn't we add a list of Post ids to a single Author row? The answer is pretty straight forward. Is there an array data type? Is there really any way to store multiple items in a single column? Nope! So we just set up the relation in one direction.
 
 This `author_id` column is called a "foreign key".
 
@@ -83,7 +83,7 @@ breed TEXT,
 owner_id INTEGER);
 ```
 
-Great, now we're ready to associate cats to their owners by creating an owner and assigning that owner's ID to certain cat's `owner_id` column. 
+Great, now we're ready to associate cats to their owners by creating an owner and assigning that owner's ID to certain cats' `owner_id` column. 
 
 #### Step 3: Associating Cats to Owners
 
@@ -153,3 +153,5 @@ The thing that "has many" is considered to be the parent. The thing that "belong
 Practice SQL Queries on <a href="http://sqlbolt.com/lesson/select_queries_review">SQLBolt</a>.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-table-relations-readme' title='Table Relations'>Table Relations</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sql-table-relations-readme'>Table Relations</a> on Learn.co and start learning to code for free.</p>
