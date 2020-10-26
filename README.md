@@ -152,6 +152,6 @@ The thing that "has many" is considered to be the parent. The thing that "belong
 
 Practice SQL Queries on <a href="http://sqlbolt.com/lesson/select_queries_review">SQLBolt</a>.
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-table-relations-readme' title='Table Relations'>Table Relations</a> on Learn.co and start learning to code for free.</p>
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/sql-table-relations-readme'>Table Relations</a> on Learn.co and start learning to code for free.</p>
+
+
