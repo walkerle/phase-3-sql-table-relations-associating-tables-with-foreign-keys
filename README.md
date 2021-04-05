@@ -11,7 +11,7 @@ In this lesson, we'll relate data from one table to data from another table usin
 
 ## Why Relate Tables?
 
-It's hard to imagine an application that saves data but doesn't relate it. For example––a Facebook user is associated to other users via "friendships", an Amazon user has a shopping cart full of items, a blog's author has many posts and posts might in turn have many tags. All of these examples require different datasets to be related or associated to one another. 
+It's hard to imagine an application that saves data but doesn't relate it. For example, a Facebook user is associated to other users via "friendships", an Amazon user has a shopping cart full of items, a blog's author has many posts and posts might in turn have many tags. All of these examples require different datasets to be related or associated to one another. 
 
 ## Relating Tables with Foreign Keys
 
@@ -167,7 +167,7 @@ So far so good. But what happens when we need to add a second cat, "Hana", to th
 
 What if this owner gets *yet another cat?* We'd have to keep growing our table horizontally, potentially forever. That is not efficient, or organized. 
 
-We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but –– at least for the purposes of this example –– a cat can only belong to one owner. Similarly, a user can write many posts, but each post was written by, and therefore belongs to, only one user.
+We can also think about the relationship between our owners and our cats in the context of a "has many" and "belongs to" relationship. An owner can have many cats, but — at least for the purposes of this example — a cat can only belong to one owner. Similarly, a user can write many posts, but each post was written by, and therefore belongs to, only one user.
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
 
