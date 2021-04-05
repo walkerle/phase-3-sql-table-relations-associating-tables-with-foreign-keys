@@ -134,15 +134,36 @@ Let's look at what would happen if we tried to add cats directly to the `owners`
 
 Adding the first cat, "Maru", to the owner "mugumogu" would look something like this: 
 
-| id | name | cat_id|
-|----|------|-------|
-| 1  | mugumogu | 1 |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>cat_id</th>
+  </tr>
+  
+  <tr>
+    <td>1</td>
+    <td>mugumogu</td>
+    <td>1</td>
+  </tr>
+</table>
 
 So far so good. But what happens when we need to add a second cat, "Hana", to the same owner?
-
-| id | name | cat_id1| cat_id2 |
-|----|------|-------|----------|
-| 1  | mugumogu | 1 | 2        |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>cat_id1</th>
+    <th>cat_id2</th>
+  </tr>
+  
+  <tr>
+    <td>1</td>
+    <td>mugumogu</td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+</table>
 
 What if this owner gets *yet another cat?* We'd have to keep growing our table horizontally, potentially forever. That is not efficient, or organized. 
 
@@ -150,8 +171,6 @@ We can also think about the relationship between our owners and our cats in the 
 
 The thing that "has many" is considered to be the parent. The thing that "belongs to" we'll call the child. The child table gets the foreign key column, the value of which is the primary key of that data's/row's parent. 
 
-Practice SQL Queries on <a href="http://sqlbolt.com/lesson/select_queries_review">SQLBolt</a>.
+## Resources
 
-
-
-
+- Practice SQL Queries on <a href="http://sqlbolt.com/lesson/select_queries_review">SQLBolt</a>.
