@@ -1,13 +1,13 @@
-# Table Relations
+# Associating Tables with Foreign Keys
 
-## Overview
+## Learning Goals
+
+- Associate two data tables using a foreign key column
+- Determine which of the two tables you're associating together will take in a foreign key column
+
+## Introduction
 
 In this lesson, we'll relate data from one table to data from another table using foreign keys. 
-
-## Objectives
-
-1. Associate two data tables using a foreign key column
-2. Determine which of the two tables you're associating together will take in a foreign key column
 
 ## Why Relate Tables?
 
