@@ -134,36 +134,15 @@ Let's look at what would happen if we tried to add cats directly to the `owners`
 
 Adding the first cat, "Maru", to the owner "mugumogu" would look something like this: 
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>id</th>
-    <th>name</th>
-    <th>cat_id</th>
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>mugumogu</td>
-    <td>1</td>
-  </tr>
-</table>
+| id | name | cat_id |
+| --- | --- | --- |
+| 1 | mugumogu | 1 |
 
 So far so good. But what happens when we need to add a second cat, "Hana", to the same owner?
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>id</th>
-    <th>name</th>
-    <th>cat_id1</th>
-    <th>cat_id2</th>
-  </tr>
-  
-  <tr>
-    <td>1</td>
-    <td>mugumogu</td>
-    <td>1</td>
-    <td>2</td>
-  </tr>
-</table>
+
+| id | name | cat_id1 | cat_id2 |
+| --- | --- | --- | --- |
+| 1 | mugumogu | 1 | 2 |
 
 What if this owner gets *yet another cat?* We'd have to keep growing our table horizontally, potentially forever. That is not efficient, or organized. 
 
