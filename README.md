@@ -67,8 +67,8 @@ owner is associated to the cat (or cats) it owns.
 For this exercise, we'll be working with the `pets_database.db` file. In your
 terminal, create the database by running:
 
-```sh
-sqlite3 pets_database.db
+```console
+$ sqlite3 pets_database.db
 ```
 
 Our ERD for this domain will look like this when we're done:
